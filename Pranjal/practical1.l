@@ -14,12 +14,10 @@
 [0-9]*\.[0-9]+      {printf("%s is floating point number\t",yytext);}
 [g-zG-Z]+            {printf("%s is invaild number\t",yytext);}
 %%
-
 int main()
 {
     yylex();
 }
-
 int yywrap()
 {
 }
