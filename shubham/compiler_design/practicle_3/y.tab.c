@@ -1122,7 +1122,7 @@ yyreduce:
     {
   case 2: /* exp1: exp  */
 #line 16 "calci.y"
-          {lrint("result is %g\n",(yyvsp[0].p));}
+          {print("result is %g\n",(yyvsp[0].p));}
 #line 1127 "y.tab.c"
     break;
 
@@ -1383,7 +1383,7 @@ yyparse();
 }while(1); 
  
 }    
-yyerrok(char *s) 
+yyerror(char *s) 
  
 {  
 printf("Standard Errors "); 

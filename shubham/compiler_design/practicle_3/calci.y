@@ -13,7 +13,7 @@
 
 %%
 
-exp1 : exp{lrint("result is %g\n",$1);}
+exp1 : exp{print("result is %g\n",$1);}
 
 exp : exp'+'exp { $$=$1+$3; } 
  
@@ -55,7 +55,7 @@ yyparse();
 }while(1); 
  
 }    
-yyerrok(char *s) 
+yyerror(char *s) 
  
 {  
 printf("Standard Errors "); 

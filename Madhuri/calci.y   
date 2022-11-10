@@ -1,0 +1,80 @@
+ 
+%{ 
+ 
+#include <stdio.h> 
+#include <math.h> 
+%}    
+%union { double p;} //to define possible symbol types 
+ 
+%token <p> num 
+ 
+  
+%left '+','-' //lowest precedence 
+ 
+%left '*','/' //highest precedence 
+ 
+%type <p> exp //Sets the type for non - terminal 
+ 
+ 
+%% 
+
+ 
+ 
+/* for storing the answer */ 
+ 
+exp1 : exp {printf("result is %g\n",$1);} 
+ 
+ 
+/* for binary arithmatic operators */ 
+ 
+exp : exp'+'exp { $$=$1+$3; } 
+ 
+ 
+|exp'-'exp { $$=$1-$3; } 
+ 
+ 
+|exp'*'exp { $$=$1*$3; }    
+|exp'/'exp {  
+ 
+if($3==0) 
+ 
+{ 
+ 
+printf("Divide By Zero"); 
+ 
+//exit(0); 
+ 
+} 
+ 
+else $$=$1/$3; 
+ 
+}    
+|'-'exp {$$=-$2;} 
+ 
+ 
+|'('exp')' {$$=$2;} 
+
+ 
+|num; 
+ 
+%% 
+ 
+ 
+void main() 
+ 
+{  
+do 
+ 
+{ 
+ 
+yyparse();  
+}while(1); 
+ 
+}    
+yyerror(char *s) 
+ 
+{  
+printf("Standard Errors "); 
+ 
+}     
+ 

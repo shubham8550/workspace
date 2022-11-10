@@ -5,6 +5,5 @@
 %%
 "0" {return Zero;}
 "1" {return One;}
-[\n] {return N1;}
-.;
+[\n] {return N1;};
 %%
