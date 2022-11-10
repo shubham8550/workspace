@@ -1,3 +1,5 @@
+//Implement a lexical analyzer for identification of numbers//
+
 %{
 #include<stdio.h>
 %}

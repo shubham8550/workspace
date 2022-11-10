@@ -1,0 +1,3 @@
+https://github.com/manvimadandotai/Mathematics-for-Machine-Learning-/blob/master/PCA/Week%201/week1_v2.ipynb
+
+https://github.com/claramatos/math-for-ml/blob/master/pca/week1.ipynb

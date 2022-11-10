@@ -739,42 +739,42 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 8 "Practical1.l"
-{("%s is Binary Number\t",yytext):}
+{printf("%s is Binary Number\t",yytext):}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 9 "Practical1.l"
-{("%s is Octal Number\t",yytext):}
+{printf("%s is Octal Number\t",yytext):}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 10 "Practical1.l"
-{("%s is Hexa decimal Number\t",yytext):}
+{printf("%s is Hexa decimal Number\t",yytext):}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 11 "Practical1.l"
-{("%s is Decimal Number\t",yytext):}
+{printf("%s is Decimal Number\t",yytext):}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 12 "Practical1.l"
-{("%s is Ẽponential Number\t",yytext):}
+{printf("%s is Ẽponential Number\t",yytext):}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 13 "Practical1.l"
-{("%s is not valid  Number\t",yytext):}
+{printf("%s is not valid  Number\t",yytext):}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 14 "Practical1.l"
-{("%s is Floating Point Number\t",yytext):}
+{printf("%s is Floating Point Number\t",yytext):}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 15 "Practical1.l"
-{("%s is Invalid Châracter Number\t",yytext):}
+{printf("%s is Invalid Châracter Number\t",yytext):}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
